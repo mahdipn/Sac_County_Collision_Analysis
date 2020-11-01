@@ -18,16 +18,22 @@ Before digging deep into the data analysis portion, we need to prepare the data 
 The initial dataset has many columns and attributes that several of them may not define the severity of the collisions. By domain knowledge and common sense, we know there are many of these variables that do not affect the collision severity. The attributes that we think might affect the collision severity include the following. We have also prepared the severity distribution of the collisions under each of these attributes and their categories. The presence of varying collision severity across different categories is a sign of the effect of that attribute of collision severity. 
 - Day of Week: 
 <img src = "images/day.JPG" width = 400>
+
 - Intersection
 <img src = "images/intersection.JPG" width = 400>
+
 - Weather Condition
 <img src = "images/weather.JPG" width = 400>
+
 - Primary Contributing Factor
 <img src = "images/pcf.JPG" width = 400>
+
 - Type of Collision
 <img src = "images/collision_type.JPG" width = 400>
+
 - Lighting Condition
 <img src = "images/light.JPG" width = 400>
+
 - Alcohol Envolvement
 <img src = "images/alcohol.JPG" width = 400>
 
