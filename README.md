@@ -9,17 +9,20 @@ For this study, we used the collision data in unincorporated Sacramento County f
 <img alt="Annual Collision Frequency" src = "images/annual_freq.JPG" width = 500>
 
 Before digging deep into the data analysis portion, we need to prepare the data for analysis and do some preliminary data exploration. This is a major step as the entire analysis depends on this step and how we handle the data. This step for our study is composed of several smaller stapes as below:
-- Initial Data Selection and Exploratory Data Analysis
 - Data Clean-up 
+- Initial Data Selection and Exploratory Data Analysis
 - Encoding Categorical Variables 
 - Final Data selection
 
-### 2.1 Initial Data Selection and Exploratory Data Analysis:
+### 2.1 Data Clean-up
+This step mainly involves removing the categories of no interest under each column (collision attribute) and combining the categories of low frequency that might affect our analysis into a broader category. These categories may include hyphens, NaN (not a number categories) and NAs (not available). 
+
+### 2.2 Initial Data Selection and Exploratory Data Analysis:
 The initial dataset has many columns and attributes that several of them may not define the severity of the collisions. By domain knowledge and common sense, we know there are many of these variables that do not affect the collision severity. The attributes that we think might affect the collision severity include the following. We have also prepared the severity distribution of the collisions under each of these attributes and their categories. The presence of varying collision severity across different categories is a sign of the effect of that attribute of collision severity. 
 - Day of Week: 
 <img src = "images/day.JPG" width = 400>
 
-- Intersection
+- Intersection: It seems collisions that happened at intersections do show some variations in collision severity. Collisions at intersections seem to be slightly more severe than those that happened at segments.	
 <img src = "images/intersection.JPG" width = 400>
 
 - Weather Condition
@@ -34,14 +37,15 @@ The initial dataset has many columns and attributes that several of them may not
 - Lighting Condition
 <img src = "images/light.JPG" width = 400>
 
-- Alcohol Envolvement
+- Alcohol Envolvement: As we can see from the chart above, alcohol involvement seems to affect the severity of collisions. Collisions with alcohol involvement tend to be more severe than those with no alcohol involvement.
 <img src = "images/alcohol.JPG" width = 400>
-
-### 2.2 Data Clean-up
-This step mainly involves removing the categories of no interest under each column (collision attribute) and combining the categories of low frequency that might affect our analysis into a broader category. These categories may include hyphens, NaN (not a number categories) and NAs (not available). 
 
 ### 2.3 Encoding Categorical Variables
 The data we are dealing with in this study are all categorical. The SWITRS data encodes the categories for each column (collision attribute) using a different method (alphanumerical codes) that is not proper for machine learning and modeling purposes. To overcome this issue, we use a method called one-hot encoding that expands each column into several columns based on the number of unique categories and assigns a value of 0 or 1 to each cell.  The value of 1, which represents “yes”, is assigned to the collision is that specific category is seen in that collision. For instance, if the category is “Dark Condition” and the collision has occurred during dark condition then this category for that collision takes a value of 1. After this step, we will be left with a table with all values of 0 and 1. 
 
 ### 2.4 Final Data Selection
+
+
+<img src = "images/cross_val.JPG" width = 600>
+
 
