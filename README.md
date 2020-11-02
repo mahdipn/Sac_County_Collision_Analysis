@@ -103,3 +103,11 @@ Accuracy of the Model |0.65
 
 <img src = "images/cm_knn.JPG" width = 400>
 
+## 5. Discussion and Recommendations
+This study analyzed the vehicle collisions and the resulting injury severity in nearly 100,000 collisions from 2015 to 2019 in unincorporated Sacramento County in California. Collision data were split based on the injury severity outcome to two classes: property damage only (PDO) and non-PDO. Three models, including logistic regression, decision tree, and kNN, were nominated to fit the data. The models were evaluated using precision, recall, F1-score, and accuracy.
+
+As you can see, even the best model has still room for improvement. We can improve the performance of our models using a variety of methods and techniques. The initial guess is that we could have segregated the data more based on the severity outcome. While it will leave us an imbalanced dataset, we can employ oversampling techniques, such as SMOTE, to overcome this issue. Other methods that we can consider include feature engineering, other feature selection methods (such as PCA), using other algorithms, and ensemble methods. We will explore some of these techniques later.
+
+If you have any questions about any part of the data, do not hesitate to reach out to me at mahdipn[at]gmail[dot]com.
+
+Enjoy coding!
