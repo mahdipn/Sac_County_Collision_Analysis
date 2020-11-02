@@ -19,22 +19,22 @@ This step mainly involves removing the categories of no interest under each colu
 
 ### 2.2 Initial Data Selection and Exploratory Data Analysis:
 The initial dataset has many columns and attributes that several of them may not define the severity of the collisions. By domain knowledge and common sense, we know there are many of these variables that do not affect the collision severity. The attributes that we think might affect the collision severity include the following. We have also prepared the severity distribution of the collisions under each of these attributes and their categories. The presence of varying collision severity across different categories is a sign of the effect of that attribute of collision severity. 
-- Day of Week: 
+- Day of Week: Based on the figure below, collisions that happened during the weekend seem to be of higher severity.
 <img src = "images/day.JPG" width = 400>
 
 - Intersection: It seems collisions that happened at intersections do show some variations in collision severity. Collisions at intersections seem to be slightly more severe than those that happened at segments.	
 <img src = "images/intersection.JPG" width = 400>
 
-- Weather Condition
+- Weather Condition: It is not clear based on the figure below to claim weather can affect the injury severity. However, historically the weather has played a role in affecting the injury severity, so we will keep it until we investigate it through our models.
 <img src = "images/weather.JPG" width = 400>
 
-- Primary Contributing Factor
+- Primary Contributing Factor: This parameter is probably the most affecting and interesting one. Some interesting patterns can be found based on the figure below. For instance, Automobile Right-of-Way disproportionally accounts for higher Non-PDO collisions than PDO.
 <img src = "images/pcf.JPG" width = 400>
 
-- Type of Collision
+- Type of Collision: Collision type also clearly explains the difference between PDO and Non-PDO collisions, as can be seen by the figure. 
 <img src = "images/collision_type.JPG" width = 400>
 
-- Lighting Condition
+- Lighting Condition: The lighting condition also seems to be affecting the severity outcome of the collisions, as perceived by the figure below. 
 <img src = "images/light.JPG" width = 400>
 
 - Alcohol Envolvement: As we can see from the chart above, alcohol involvement seems to affect the severity of collisions. Collisions with alcohol involvement tend to be more severe than those with no alcohol involvement.
