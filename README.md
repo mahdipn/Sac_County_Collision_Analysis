@@ -48,4 +48,58 @@ Even under the initially selected attributes, there might be several categories 
 
 <img src = "images/cross_val.JPG" width = 600>
 
+## 3. Methodology
+### 3.1 Model Identification
+In this study, we considered three models to fit the data. These models include:
+- Logistic Regression
+- Decision Tree Analysis
+- kNN
+Each of these models has its own hyperparameters that need to be tuned to get the best result out of them. This process needs a method, called the grid search. The way it works is that we identify the hyperparameters that we want to explore for each of the models and then run each model using those hyperparameters. For each model, we then get a set of hyperparameter(s) that help us achieve the best results for that specific model. 
+
+### 3.2 Model Evaluation Metrics
+Now that we have the best hyperparameters for each of the selected models, the next step is to compare the best of these models against each other and come up with the winning model that outperforms the others. The confusion matrix is a well-known tool to assess and evaluate the performance of classification methods. The tool can help calculate several metrics such as precision and recall. In this problem, we do care about both correctly predicted positive cases (Non-PDO) and negative cases (PDO), hence we suggest combining precision and recall. The combination of these two metrics is feasible through the calculation of the f1-score. Furthermore, accuracy, calculated as the total number of correctly predicted classes divided by total sample size is another important metric we would like to calculate and consider.
+
+## 4. Results
+Now that we know the best hyperparameters for each model and have identified our performance evaluation metrics, we need to develop the models, one by one, using the hyperparameters and calculate the performance metrics. 
+
+### 4.1 Logistic Regression
+Through the implementation of the hyperparameter tuning practice and identification of the best parameters, we developed a logistic regression model and calculated the performance evaluation metrics. These metrics, calculated using the confusion matrix (depicted below) are as follows:
+
+
+Severity Level|Precision|Recal|f1-score
+------------|------------|---------|---------
+Non-PDO     |  0.64      |   0.43  |    0.51  
+PDO         |  0.66      |   0.82  |    0.73    
+
+Accuracy of the Model |0.65 
+---|---
+
+<img src = "images/cm_lr.JPG" width = 400>
+
+### 4.2 Decision Tree Analysis
+Through the implementation of the hyperparameter tuning practice and identification of the best parameters, we developed a decision tree analysis model and calculated the performance evaluation metrics. These metrics, calculated using the confusion matrix (depicted below) are as follows:
+
+Severity Level|Precision|Recal|f1-score
+------------|------------|---------|---------
+Non-PDO     |  0.63      |   0.44  |    0.52  
+PDO         |  0.66      |   0.81  |    0.73    
+
+Accuracy of the Model |0.65 
+---|---
+
+<img src = "images/cm_dt.JPG" width = 400>
+
+### 4.3 k-Nearest Neighbor
+Through the implementation of the hyperparameter tuning practice and identification of the best parameters, we developed a kNN model and calculated the performance evaluation metrics. These metrics, calculated using the confusion matrix (depicted below) are as follows:
+
+
+Severity Level|Precision|Recal|f1-score
+------------|------------|---------|---------
+Non-PDO     |  0.64      |   0.41  |    0.50  
+PDO         |  0.66      |   0.83  |    0.73    
+
+Accuracy of the Model |0.65 
+---|---
+
+<img src = "images/cm_knn.JPG" width = 400>
 
